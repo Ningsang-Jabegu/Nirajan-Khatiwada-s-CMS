@@ -9,17 +9,17 @@
     <meta name="keywords" content="Nirajan cms, Khatiwada cms, Nirajan Khatiwada cms, Nirajan Khatiwada work cms" />
     <meta property="og:type" content="website, personal website, portfolio website" />
     <meta property="og:title" content="Nirajan post, Nirajan Khatiwada post, Khatiwada Nirajan post, Khatiwada cms" />
-    <meta property="og:description"
-        content="This is the cms page of Nirajan Khatiwada's portfolio website.">
+    <meta property="og:description" content="This is the cms page of Nirajan Khatiwada's portfolio website.">
     <meta name='robots' content='max-image-preview:large' />
-    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="https://nirajan.ningsangjabegu.com.np/css/style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>CMS - निराजन खतिवडा | CMS - Nirajan</title>
     <link rel="icon" type="image/x-icon" href="https://nirajan.ningsangjabegu.com.np/images/Fav_Icon/fav_icon.jpg">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    
+
 </head>
 
-<body>
+<body id="cms">
     <header>
         <div class="name_logo">
             <!--<span class="first_name">Nirajan</span>
@@ -36,28 +36,50 @@
             <li class="dropdown">
                 <i class="fa fas fa-bars"></i>
                 <div class="dropdown-content">
-                  <a href="https://nirajan.ningsangjabegu.com.np/html_pages/contact_us.html">Contact us</a>
+                    <a href="https://nirajan.ningsangjabegu.com.np/html_pages/contact_us.html">Contact us</a>
                 </div>
-              </li>
+            </li>
         </ul>
     </nav>
     <main>
-        <div class="under_construction">
-            <h1>CMS Page Under Construction.....</h1>
-            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" y="0" width="500" height="500" fill="#f2f2f2"/>
-                <rect x="100" y="100" width="300" height="300" fill="#fff"/>
-                <rect x="120" y="120" width="260" height="260" fill="#ddd"/>
-                <rect x="140" y="140" width="200" height="200" fill="#bbb"/>
-                <rect x="160" y="160" width="140" height="140" fill="#999"/>
-                <rect x="180" y="180" width="80" height="80" fill="#777"/>
-                <rect x="200" y="200" width="20" height="20" fill="#555"/>
-                <rect x="250" y="250" width="20" height="20" fill="#333"/>
-                <rect x="300" y="300" width="20" height="20" fill="#111"/>
-                <rect x="350" y="350" width="20" height="20" fill="#000"/>
-                <text x="250" y="450" font-size="30" text-anchor="middle" fill="#333">cms Page Under Construction</text>
-              </svg>
-              <h1>This is short notice that cms is undre development.....</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Photos</a></li>
+                <li><a href="#">Songs</a>
+                    <ul class="submenu">
+                        <li><a href="#" class="spotify"><img src="spotify.png" alt="Spotify"></a></li>
+                        <li><a href="#" class="youtube"><img src="youtube.png" alt="Youtube"></a></li>
+                        <li><a href="#" class="apple-music"><img src="apple-music.png" alt="Apple Music"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div id="photos" class="tabcontent">
+                <button class="upload-btn">Upload Photo</button>
+            </div>
+
+            <div id="songs" class="tabcontent">
+                <div class="column">
+                    <a href="#" class="spotify"><svg class="songs_platform_logos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"/></svg></a>
+                    <a href="#" class="youtube"><svg class="songs_platform_logos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
+                    <a href="#" class="apple-music"><svg class="songs_platform_logos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg></a>
+                </div>
+                <div class="column">
+                    <input type="text" placeholder="Enter link">
+                    <button class="upload-btn">Upload Song</button>
+                </div>
+            </div>
+
+            <div id="projects" class="tabcontent">
+                <h1>Projects</h1>
+                <div class="code-area">
+                    <textarea placeholder="Paste your code here"></textarea>
+                    <button class="upload-btn">Upload Code</button>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="footer-distributed">
