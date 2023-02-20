@@ -1,18 +1,20 @@
 #cms main {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     position: relative;
     padding: 1em;
 }
+
 #cms main .container {
     width: 85%;
 }
+
 #cms main nav {
     background-color: #3a92c2d7;
     float: left;
     width: max-content;
-    height: auto;
-    padding: 20px;
+    height: max-content;
+    padding: .5em;
     box-sizing: border-box;
     border-radius: .8em;
 }
@@ -25,10 +27,11 @@
 
 #cms main nav li {
     margin-bottom: 10px;
+
 }
 
 #cms main nav a {
-    color: white;
+    color: #03103e;
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -36,12 +39,24 @@
 }
 
 #cms main nav a:hover {
-    background-color: #ffffff30;
+    background-color: #ffffff44;
 }
+
+#cms .selected {
+    border-bottom: 2px solid #03103e;
+    background: #e5e2e2;
+}
+
+#cms .selected:hover {
+    border-bottom: 2px solid #071856;
+    background: #e5e2e2d0;
+}
+
 #cms .songs_platform_logos {
     height: 2em;
     width: 2em;
 }
+
 #cms .subnav {
     display: none;
     position: absolute;
@@ -99,4 +114,91 @@
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#cms .container #photos {
+    border: 2px solid black;
+    padding: 1em;
+}
+
+#cms .container #photos h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 15pt;
+    line-height: 1.5;
+}
+
+#cms .container #photos h1 span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 1.5;
+}
+
+#cms .container #photos .show_photo {
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px #03263459;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+    height: clamp(220px, 20vw, 293px);
+    width: clamp(220px, 20vw, 293px);
+    border-radius: 1em;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#cms .cross-sign {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2em;
+    height: 2em;
+    background: rgba(0, 0, 0, 0.212);
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 10px #03263459;
+    cursor: pointer;
+}
+#cms .cross-sign:hover {
+    background: rgba(0, 0, 0, 0.142);
+}
+
+#cms .cross-sign::before,
+.cross-sign::after {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: .2em;
+    background-color: #474747;
+    margin: .4em .9em;
+}
+
+#cms .cross-sign::before {
+    transform: rotate(45deg);
+}
+
+#cms .cross-sign::after {
+    transform: rotate(-45deg);
+}
+
+#cms input[type="file"] {
+    border: 2px solid #212121;
+    padding: 5px;
+}
+
+#cms button[type="submit"] {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cms button[type="submit"]:hover {
+    background-color: #3e8e41;
 }
