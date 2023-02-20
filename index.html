@@ -59,34 +59,59 @@
         <div class="container">
             <div id="photos" class="tabcontent">
                 <h1>Upload a Photo <span>(maximum 11 photos at a time)</span></h1>
-                <div class="show_photo">
-                    <span class="cross-sign"></span>
+                <input type="file" id="image-input" accept="image/*">
+                
+                <div class="photo-container">
+                    <div class="drop-box">
+                        <p>+</p>
+                    </div>
                 </div>
-                <input type="file" name="image" id="photo_upload" accept="image/*">
+                <button id="add-photo">Upload</button>
                 <script>
-                    // Get the input element
-                    var input = document.querySelector('#photo_upload');
+                    const imageInput = document.getElementById('image-input');
+                    const addPhotoBtn = document.getElementById('add-photo');
+                    const photoContainer = document.querySelector('.photo-container');
+                    const uploadButton = document.querySelector('.drop-box');
+                    const fileInput = document.querySelector('#image-input');
 
-                    // Listen for changes to the input and set the background of the div to the uploaded image
-                    input.addEventListener('change', function (event) {
-                        // Get the file object
-                        var file = event.target.files[0];
+                    uploadButton.addEventListener('click', function () {
+                        fileInput.click();
+                        fileInput.addEventListener('change', function handleFileSelect(event) {
+                            fileInput.removeEventListener('change', handleFileSelect);
+                            const file = imageInput.files[0];
+                            if (file && file.type.startsWith('image/')) {
+                                const url = URL.createObjectURL(file);
+                                const photoDiv = document.createElement('div');
+                                photoDiv.classList.add('photo');
+                                photoDiv.style.backgroundImage = `url(${url})`;
+                                photoDiv.dataset.index = photoIndex;
 
-                        // Check if the file is an image
-                        if (file.type.match('image.*')) {
-                            // Create a new FileReader object
-                            var reader = new FileReader();
+                                const crossSign = document.createElement('div');
+                                crossSign.classList.add('cross-sign');
+                                crossSign.innerHTML = '&times;';
+                                crossSign.addEventListener('click', () => {
+                                    const index = crossSign.parentNode.dataset.index;
+                                    photoContainer.removeChild(crossSign.parentNode);
+                                    URL.revokeObjectURL(url);
+                                    const photos = document.querySelectorAll('.photo');
+                                    photoIndex = photos.length;
+                                    photos.forEach((photo, i) => {
+                                        photo.dataset.index = i;
+                                    });
+                                });
 
-                            // Set the callback function for when the file is loaded
-                            reader.onload = function (event) {
-                                // Set the background image of the div to the uploaded image
-                                document.querySelector('.show_photo').style.backgroundImage = 'url(' + event.target.result + ')';
-                            };
-
-                            // Read the file as a data URL
-                            reader.readAsDataURL(file);
-                        }
+                                photoDiv.appendChild(crossSign);
+                                let display_img = photoContainer.appendChild(photoDiv);
+                                let img_in_second_last_position = photoContainer.children[photoContainer.children.length - 2];
+                                photoContainer.insertBefore(display_img, img_in_second_last_position);
+                                photoIndex++;
+                            }
+                        });
                     });
+
+                    let photoIndex = 0;
+
+                    addPhotoBtn.addEventListener('click', () => { });
                 </script>
             </div>
 

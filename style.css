@@ -3,6 +3,7 @@
     justify-content: space-between;
     position: relative;
     padding: 1em;
+    gap: 1em;
 }
 
 #cms main .container {
@@ -135,70 +136,47 @@
     line-height: 1.5;
 }
 
-#cms .container #photos .show_photo {
-    border-radius: 1em;
-    box-shadow: 0px 0px 10px #03263459;
-    margin: 1em 0;
+#cms .photo-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 1em;
-    padding: 1em;
+    margin: 1em 0;
+  }
+  
+#cms   .photo {
+    position: relative;
     height: clamp(220px, 20vw, 293px);
     width: clamp(220px, 20vw, 293px);
+    background-size: cover;
+    background-position: center;
     border-radius: 1em;
-    background-size: 100% 100%;
+  }
+  #cms .drop-box {
+    height: clamp(220px, 20vw, 293px);
+    width: clamp(220px, 20vw, 293px);
+    border: 3px dashed #1a2078;
+    border-radius: .4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
     position: relative;
-}
-
-#cms .cross-sign {
+  }
+  #cms #image-input {
+    display: none;
+  }
+#cms   .cross-sign {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 2em;
-    height: 2em;
-    background: rgba(0, 0, 0, 0.212);
-    border-radius: 50%;
-    box-shadow: inset 0px 0px 10px #03263459;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
     cursor: pointer;
-}
-#cms .cross-sign:hover {
-    background: rgba(0, 0, 0, 0.142);
-}
-
-#cms .cross-sign::before,
-.cross-sign::after {
-    position: absolute;
-    content: "";
-    height: 1em;
-    width: .2em;
-    background-color: #474747;
-    margin: .4em .9em;
-}
-
-#cms .cross-sign::before {
-    transform: rotate(45deg);
-}
-
-#cms .cross-sign::after {
-    transform: rotate(-45deg);
-}
-
-#cms input[type="file"] {
-    border: 2px solid #212121;
-    padding: 5px;
-}
-
-#cms button[type="submit"] {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#cms button[type="submit"]:hover {
-    background-color: #3e8e41;
-}
+  }
