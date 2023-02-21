@@ -118,8 +118,10 @@
 }
 
 #cms .container #photos {
-    border: 2px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.313);
     padding: 1em;
+    box-shadow: 0px 0px 10px #03263459;
+    margin-bottom: 1em;
 }
 
 #cms .container #photos h1 {
@@ -155,6 +157,7 @@
     height: clamp(220px, 20vw, 293px);
     width: clamp(220px, 20vw, 293px);
     border: 3px dashed #1a2078;
+    color: #1a2078;
     border-radius: .4em;
     display: flex;
     justify-content: center;
@@ -179,4 +182,20 @@
     font-weight: bold;
     text-align: center;
     cursor: pointer;
+  }
+  #cms #add-photo {
+    padding: .5em 1em;
+    border-radius: 1em;
+    background: #3a92c2d7;
+    border: 1px solid #123f57d7;
+    color: #000000;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+  }
+  #cms #add-photo:hover {
+    background: #3a92c2c8;
+    border: 1px solid #123f5788;
+    color: #13043ccb;
+    
   }
